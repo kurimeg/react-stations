@@ -8,6 +8,7 @@ import './App.css'
  * @type {React.FC}
  */
 export const App = () => {
+  const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/bulldog-boston/n02096585_904.jpg");
   return (
     <div>
       <header>
@@ -16,7 +17,7 @@ export const App = () => {
       <div>
         犬の画像を表示するサイトです。
       </div>
-      <img src="https://images.dog.ceo/breeds/bulldog-boston/n02096585_904.jpg" />
+      <img src={dogUrl} />
     </div>
   )
 }
