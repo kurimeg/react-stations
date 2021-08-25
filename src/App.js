@@ -9,8 +9,14 @@ import './App.css'
  */
 export const App = () => {
   return (
-    <header>
-      <h2>Dogアプリ</h2>
-    </header>
+    <div>
+      <header>
+        <h2>Dogアプリ</h2>
+      </header>
+      <div>
+        犬の画像を表示するサイトです。
+      </div>
+      <img src="https://images.dog.ceo/breeds/bulldog-boston/n02096585_904.jpg" />
+    </div>
   )
 }
