@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+}
+.header{
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  background: #F5F5F5;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Hiragino Kaku Gothic Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 81px;
+}
+.box-container{
+  padding-top: 95px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px;
+  padding: 8px;  
+  width: 304px;
+}
+.box__image{
+  height: 268px;
+}
+.button-container{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 32px;
+}
+button{
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  padding: 6px 24px;
+  appearance: none;
+  color: #FFFFFF;
+}
+.border{
+  margin: 20px;
+  border: 1px solid #000000;
+}

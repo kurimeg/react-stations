@@ -9,23 +9,28 @@ import './App.css'
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/bulldog-boston/n02096585_904.jpg");
-  const fetchDogUrl = () =>{
+  const fetchDogUrl = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
-    .then(response => response.json())
-    .then(data => setDogUrl(data.message));
+      .then(response => response.json())
+      .then(data => setDogUrl(data.message));
   }
   return (
     <div>
-      <header>
-        <h2>Dogアプリ</h2>
+      <header className="header">
+        <div>Dogアプリ</div>
       </header>
-      <div>
-        犬の画像を表示するサイトです。
+      <div className="box-container">
+        <div className="box">
+          <p>犬の画像を表示するサイトです。</p>
+        </div>
+        <div className="box">
+          <img className="box__image" src={dogUrl} />
+        </div>
       </div>
-      <img src={dogUrl} />
-      <div>
+      <div className="button-container">       
         <button onClick={fetchDogUrl}>更新</button>
       </div>
+      <div className="border"></div>
     </div>
   )
 }
