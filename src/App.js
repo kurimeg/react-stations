@@ -9,6 +9,11 @@ import './App.css'
  */
 export const App = () => {
   const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/bulldog-boston/n02096585_904.jpg");
+  const fetchDogUrl = () =>{
+    fetch("https://dog.ceo/api/breeds/image/random")
+    .then(response => response.json())
+    .then(data => setDogUrl(data.message));
+  }
   return (
     <div>
       <header>
@@ -19,7 +24,7 @@ export const App = () => {
       </div>
       <img src={dogUrl} />
       <div>
-        <button onClick={(e) => {setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg");}}>更新</button>
+        <button onClick={fetchDogUrl}>更新</button>
       </div>
     </div>
   )
