@@ -19,18 +19,20 @@ export const App = () => {
       <header className="header">
         <div>Dogアプリ</div>
       </header>
-      <div className="box-container">
-        <div className="box">
-          <p>犬の画像を表示するサイトです。</p>
+      <main>
+        <div className="box-container">
+          <div className="box">
+            <p>犬の画像を表示するサイトです。</p>
+          </div>
+          <div className="box">
+            <img className="box__image" src={dogUrl} />
+          </div>
         </div>
-        <div className="box">
-          <img className="box__image" src={dogUrl} />
+        <div className="button-container">       
+          <button onClick={fetchDogUrl}>更新</button>
         </div>
-      </div>
-      <div className="button-container">       
-        <button onClick={fetchDogUrl}>更新</button>
-      </div>
-      <div className="border"></div>
+        <div className="border"></div>
+      </main>
     </div>
   )
 }
